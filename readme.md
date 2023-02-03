@@ -14,7 +14,7 @@
 
 3.  Run the following command to install the dependencies:
 
-Copy code
+
 
 pip install -r requirements.txt
 

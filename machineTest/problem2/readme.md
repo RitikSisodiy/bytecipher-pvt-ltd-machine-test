@@ -73,9 +73,20 @@ it is a partial update
 
 ## **Admin Interface**
 To access the Django Admin interface, navigate to /admin/ in your browser. You will need to log in with a superuser account. From the admin interface
+to create admin credentials run
+
+-  python manage.py createsuperuser 
 
 ## **JWT Token**
-The JWT token obtained from the login endpoint is required for accessing the protected endpoints (addProduct, searchProduct).
+The JWT token obtained from the login endpoint is required for accessing the protected endpoints (addProduct, searchProduct) as Bearer Token.
 
 ## **Conclusion**
 This API provides a basic implementation of product and user using Django Rest Framework. we can add more functionalities as per the requirement.
+
+Note : make sure to install mongodb compass and add mongodb database name in restApi/settings.py 
+DATABASES = {
+     'default': {
+         'ENGINE': 'djongo',
+         'NAME': 'restapiDb', #replace db name here
+     }
+ }
