@@ -1,0 +1,294 @@
+{
+    "info": {
+        "name": "restAPI",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "auth",
+            "item": [
+                {
+                    "name": "login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/login/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "path": [
+                                "api",
+                                "login"
+                            ],
+                            "port": "8000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\":\"ritik\",\n  \"password\":\"12345678\"\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1MzE1NzQ0LCJpYXQiOjE2NzUzMTU0NDQsImp0aSI6IjA1N2E1M2NiNDkyYzQ2MmI4YTM5NWU0M2RlYzcxNzQ3IiwidXNlcl9pZCI6MX0.HFShWTrzpXJkghyKc-rtnhg2DQhKj82GadNNAlzx-e4",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "createuser",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/signup/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "path": [
+                                "api",
+                                "signup"
+                            ],
+                            "port": "8000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\":\"ritik@gmail.com\",\n  \"password\":\"12345678\",\n  \"username\":\"ritik\"\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "product",
+            "item": [
+                {
+                    "name": "add",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/products/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "path": [
+                                "products"
+                            ],
+                            "port": "8000"
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "ritik",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "price",
+                                    "value": "2400",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "color",
+                                    "value": "red",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "id",
+                                    "value": "2",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "images",
+                                    "src": "..\\..\\..\\..\\..\\Pictures\\Screenshot 2023-01-09 220340.png",
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1MzE1NzQ0LCJpYXQiOjE2NzUzMTU0NDQsImp0aSI6IjA1N2E1M2NiNDkyYzQ2MmI4YTM5NWU0M2RlYzcxNzQ3IiwidXNlcl9pZCI6MX0.HFShWTrzpXJkghyKc-rtnhg2DQhKj82GadNNAlzx-e4",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "get",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/products/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "path": [
+                                "products"
+                            ],
+                            "port": "8000"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1MzQ2OTYwLCJpYXQiOjE2NzUzNDY2NjAsImp0aSI6IjhlZDI4MWI4NmY3NTQyNzU5Zjg3MDE3ZTEzODljM2M3IiwidXNlcl9pZCI6MX0.9ZDLSWAjCEff_JG0ovVIAe7AR3Wm0MMO6A2rGK3H1aU",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "update",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/products/1/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "path": [
+                                "products",
+                                "1"
+                            ],
+                            "port": "8000"
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "product1",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "price",
+                                    "value": "300",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "color",
+                                    "value": "white",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "images",
+                                    "src": "",
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1MzQ2OTYwLCJpYXQiOjE2NzUzNDY2NjAsImp0aSI6IjhlZDI4MWI4NmY3NTQyNzU5Zjg3MDE3ZTEzODljM2M3IiwidXNlcl9pZCI6MX0.9ZDLSWAjCEff_JG0ovVIAe7AR3Wm0MMO6A2rGK3H1aU",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "searchProduct",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/products/search/?keywords=Product1",
+                            "query": [
+                                {
+                                    "key": "keywords",
+                                    "value": "Product1"
+                                }
+                            ],
+                            "variable": [],
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "path": [
+                                "products",
+                                "search"
+                            ],
+                            "port": "8000"
+                        }
+                    }
+                },
+                {
+                    "name": "delete",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/products/1/",
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "path": [
+                                "products",
+                                "1"
+                            ],
+                            "port": "8000"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1MzQ2OTYwLCJpYXQiOjE2NzUzNDY2NjAsImp0aSI6IjhlZDI4MWI4NmY3NTQyNzU5Zjg3MDE3ZTEzODljM2M3IiwidXNlcl9pZCI6MX0.9ZDLSWAjCEff_JG0ovVIAe7AR3Wm0MMO6A2rGK3H1aU",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
